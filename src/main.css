@@ -1,3 +1,18 @@
+html {
+  --color-black: #0e111b;
+  --color-white: #ffffff;
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-white-30: rgba(255, 255, 255, 0.3);
+  --color-white-20: rgba(255, 255, 255, 0.2);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-5: rgba(255, 255, 255, 0.05);
+  --color-primary: #fdc000;
+  --color-hover: #f86a05;
+  --color-area: #1c212e;
+}
 body {
+  background-color: var(--color-black);
   font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  color: var(--color-white);
 }
