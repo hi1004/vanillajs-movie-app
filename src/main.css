@@ -10,9 +10,32 @@ html {
   --color-hover: #f86a05;
   --color-area: #1c212e;
 }
+
 body {
   background-color: var(--color-black);
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
   color: var(--color-white);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.headline {
+  margin-bottom: 40px;
+}
+.headline h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.headline h1 span {
+  color: var(--color-primary);
+}
+.headline p {
+  color: var(--color-white-30);
 }
