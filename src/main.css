@@ -123,6 +123,11 @@ body {
   justify-content: center;
   gap: 20px;
 }
+.movie-list .message {
+  color: var(--color-primary);
+  font-size: 20px;
+  text-align: center;
+}
 
 /* MOVIE ITEM */
 .movies .movie {
