@@ -5,10 +5,13 @@ const store = new Store({
   page: 1,
   pageMax: 1,
   movies: [],
+  movie: {},
   loading: false,
   message: 'Search for the movie title!',
 });
+
 export default store;
+
 export const searchMovies = async page => {
   store.state.loading = true;
   store.state.page = page;
@@ -33,5 +36,16 @@ export const searchMovies = async page => {
     console.log(error);
   } finally {
     store.state.loading = false;
+  }
+};
+
+export const getMovieDetails = async id => {
+  try {
+    const res = await fetch(
+      `https://www.omdbapi.com/?apikey=7035c60c&i=${id}&plot=full`
+    );
+    store.state.movie = await res.json();
+  } catch (error) {
+    console.log('gtMovieDetails');
   }
 };
