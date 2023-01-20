@@ -1,4 +1,5 @@
 import { Component } from '../core/core';
+import aboutStore from '../store/about';
 
 export default class TheHeader extends Component {
   constructor() {
@@ -22,8 +23,6 @@ export default class TheHeader extends Component {
             isValid: true,
           },
         ],
-        logoURL:
-          'https://github.com/hi1004/United-IT-Promotion/blob/master/src/assets/executives/executives5.gif?raw=true',
       },
     });
     window.addEventListener('popstate', () => {
@@ -59,7 +58,7 @@ export default class TheHeader extends Component {
         </ul>
       </nav>
       <a href="#/about" class="user">
-        <img src="${this.state.logoURL}" alt="User" />
+        <img src="${aboutStore.state.photo}" alt="User" />
       </a>
     `;
   }
