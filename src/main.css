@@ -21,10 +21,26 @@ body {
   user-select: none;
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
 .container {
   max-width: 1120px;
   margin: 0 auto;
   padding: 40px 0;
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 20px;
+  }
 }
 
 .btn {
@@ -156,6 +172,17 @@ header .user:hover {
 header .user img {
   width: 100%;
 }
+@media (max-width: 600px) {
+  header {
+    padding: 14px 20px;
+  }
+  header nav {
+    display: none;
+  }
+  header .user {
+    right: 20px;
+  }
+}
 
 /* HEADLINE */
 .headline {
@@ -172,6 +199,11 @@ header .user img {
 }
 .headline p {
   color: var(--color-white-30);
+}
+@media (max-width: 600px) {
+  .headline h1 {
+    font-size: 60px;
+  }
 }
 
 /* SEARCH */
@@ -308,4 +340,76 @@ header .user img {
   font-size: 20px;
   color: var(--color-white);
   margin: 24px 0 6px;
+}
+@media (max-width: 1200px) {
+  .the-movie {
+    gap: 30px;
+  }
+  .the-movie .poster {
+    --width: 300px;
+  }
+}
+@media (max-width: 720px) {
+  .the-movie {
+    display: block;
+  }
+  .the-movie .poster {
+    margin: 0 auto;
+  }
+  .the-movie .title {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+}
+
+/* ABOUT */
+.about .photo {
+  width: 230px;
+  height: 230px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  background-size: cover;
+}
+.about .name {
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+}
+.about p {
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.about a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px 40px 60px;
+  text-align: center;
+}
+footer a {
+  color: var(--color-white-20);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* NOT FOUND */
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.not-found h1 {
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--color-white-10);
+  text-align: center;
 }
