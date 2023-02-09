@@ -1,19 +1,13 @@
 import { Component } from '../core/core';
-import movieStore from '../store/movie';
 import MovieItem from './MovieItem';
+import movieStore from '../store/movie';
 
-export default class MovieLsit extends Component {
+export default class MovieList extends Component {
   constructor() {
     super();
-    movieStore.subscribe('movies', () => {
-      this.render();
-    });
-    movieStore.subscribe('loading', () => {
-      this.render();
-    });
-    movieStore.subscribe('message', () => {
-      this.render();
-    });
+    movieStore.subscribe('movies', () => this.render());
+    movieStore.subscribe('message', () => this.render());
+    movieStore.subscribe('loading', () => this.render());
   }
   render() {
     this.el.classList.add('movie-list');
@@ -27,7 +21,6 @@ export default class MovieLsit extends Component {
     `;
 
     const moviesEl = this.el.querySelector('.movies');
-
     moviesEl?.append(
       ...movieStore.state.movies.map(
         movie =>
@@ -36,6 +29,7 @@ export default class MovieLsit extends Component {
           }).el
       )
     );
+
     const loaderEl = this.el.querySelector('.the-loader');
     movieStore.state.loading
       ? loaderEl?.classList.remove('hide')

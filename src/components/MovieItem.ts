@@ -22,8 +22,12 @@ export default class MovieItem extends Component {
     this.el.style.backgroundImage = `url(${movie.Poster})`;
     this.el.innerHTML = /* html */ `
       <div class="info">
-        <div class="year">${movie.Year}</div>
-        <div class="title">${movie.Title}</div>
+        <div class="year">
+          ${movie.Year}
+        </div>
+        <div class="title">
+          ${movie.Title}
+        </div>
       </div>
     `;
   }

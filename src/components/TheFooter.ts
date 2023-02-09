@@ -12,13 +12,13 @@ export default class TheFooter extends Component {
     this.el.innerHTML = /* html */ `
       <div>
         <a href="${repository}">
-          GitHub Repository
+          GitHub Repository.
         </a>
       </div>
       <div>
         <a href="${github}">
           ${new Date().getFullYear()}
-          HI1004
+          HEROPY
         </a>
       </div>
     `;
