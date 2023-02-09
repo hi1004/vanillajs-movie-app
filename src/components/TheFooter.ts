@@ -18,7 +18,7 @@ export default class TheFooter extends Component {
       <div>
         <a href="${github}">
           ${new Date().getFullYear()}
-          HEROPY
+          HI1004
         </a>
       </div>
     `;
