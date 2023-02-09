@@ -1,6 +1,8 @@
 import { Component } from '../core/core';
 import aboutStore from '../store/about';
 
+import { Component } from '../core/core';
+
 export default class TheHeader extends Component {
   constructor() {
     super({
@@ -10,55 +12,50 @@ export default class TheHeader extends Component {
           {
             name: 'Search',
             href: '#/',
-            isValid: true,
           },
           {
             name: 'Movie',
-            href: '#/movie',
-            isValid: false,
+            href: '#/movie?id=tt4520988',
           },
           {
             name: 'About',
             href: '#/about',
-            isValid: true,
           },
         ],
       },
     });
     window.addEventListener('popstate', () => {
-      const href = this.state.menus[1].href.split('?')[0];
-      const hash = location.hash.split('?')[0];
-      const isValid = href === hash;
-      if (isValid) this.state.menus[1].isValid = true;
-
       this.render();
     });
   }
   render() {
     this.el.innerHTML = /* html */ `
-      <a href="#/" class="logo"><span>OMDbAPI</span>.COM</a>
+      <a
+        href="#/"
+        class="logo">
+        <span>OMDbAPI</span>.COM
+      </a>
       <nav>
         <ul>
           ${this.state.menus
-            .filter(menu => menu.isValid)
             .map(menu => {
               const href = menu.href.split('?')[0];
               const hash = location.hash.split('?')[0];
               const isActive = href === hash;
               return /* html */ `
               <li>
-                <a href="${menu.href}" class="${isActive ? 'active' : ''}">
+                <a
+                  class="${isActive ? 'active' : ''}"
+                  href="${menu.href}">
                   ${menu.name}
                 </a>
-              </li>
-            `;
+              </li>`;
             })
             .join('')}
-            
         </ul>
       </nav>
       <a href="#/about" class="user">
-        <img src="${aboutStore.state.photo}" alt="User" />
+        <img src='${aboutStore.state.photo}' alt="User">
       </a>
     `;
   }
