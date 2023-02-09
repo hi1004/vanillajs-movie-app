@@ -21,7 +21,7 @@ export default class MovieLsit extends Component {
       ${
         movieStore.state.message
           ? `<div class="message">${movieStore.state.message}</div>`
-          : `<div class="movies"></div>`
+          : '<div class="movies"></div>'
       }
       <div class="the-loader hide"></div>
     `;
@@ -38,7 +38,7 @@ export default class MovieLsit extends Component {
     );
     const loaderEl = this.el.querySelector('.the-loader');
     movieStore.state.loading
-      ? loaderEl.classList.remove('hide')
-      : loaderEl.classList.add('hide');
+      ? loaderEl?.classList.remove('hide')
+      : loaderEl?.classList.add('hide');
   }
 }
