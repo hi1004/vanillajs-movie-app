@@ -1,9 +1,16 @@
 import { Component } from '../core/core';
 import aboutStore from '../store/about';
 
-import { Component } from '../core/core';
+interface State {
+  [key: string]: unknown;
+  menus: {
+    name: string;
+    href: string;
+  }[];
+}
 
 export default class TheHeader extends Component {
+  public state!: State;
   constructor() {
     super({
       tagName: 'header',
@@ -55,8 +62,7 @@ export default class TheHeader extends Component {
         </ul>
       </nav>
       <a href="#/about" class="user">
-        <img src='${aboutStore.state.photo}' alt="User">
-      </a>
+      <img src='${aboutStore.state.photo}' alt="User">      </a>
     `;
   }
 }
