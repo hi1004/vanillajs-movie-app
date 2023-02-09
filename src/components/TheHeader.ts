@@ -62,7 +62,8 @@ export default class TheHeader extends Component {
         </ul>
       </nav>
       <a href="#/about" class="user">
-      <img src='${aboutStore.state.photo}' alt="User">      </a>
+        <img src='${aboutStore.state.photo}' alt="User">
+      </a>
     `;
   }
 }

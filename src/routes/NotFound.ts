@@ -5,7 +5,7 @@ export default class NotFound extends Component {
     this.el.classList.add('container', 'not-found');
     this.el.innerHTML = /* html */ `
       <h1>
-        Sorry..<br>
+        Sorry..<br />
         Page Not Found.
       </h1>
     `;

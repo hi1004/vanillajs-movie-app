@@ -3,6 +3,7 @@ import Headline from '../components/Headline';
 import Search from '../components/Search';
 import MovieList from '../components/MovieList';
 import MovieListMore from '../components/MovieListMore';
+
 export default class Home extends Component {
   render() {
     const headline = new Headline().el;

@@ -5,7 +5,9 @@ export default class Search extends Component {
   render() {
     this.el.classList.add('search');
     this.el.innerHTML = /* html */ `
-      <input type="text" value="${movieStore.state.searchText}" placeholder="Enter the movie title to search!" />
+      <input
+          value="${movieStore.state.searchText}" 
+          placeholder="Enter the movie title to search!" />
       <button class="btn btn-primary">
         Search!
       </button>
@@ -15,16 +17,20 @@ export default class Search extends Component {
     inputEl?.addEventListener('input', () => {
       movieStore.state.searchText = inputEl.value;
     });
-    inputEl?.addEventListener('keydown', e => {
-      if (e.key === 'Enter' && movieStore.state.searchText.trim()) {
-        searchMovies(1);
+    inputEl?.addEventListener('keydown', async (event: Event) => {
+      if (
+        event instanceof KeyboardEvent &&
+        event.key === 'Enter' &&
+        movieStore.state.searchText.trim()
+      ) {
+        await searchMovies(1);
       }
     });
 
     const btnEl = this.el.querySelector('.btn');
-    btnEl?.addEventListener('click', () => {
+    btnEl?.addEventListener('click', async () => {
       if (movieStore.state.searchText.trim()) {
-        searchMovies(1);
+        await searchMovies(1);
       }
     });
   }
