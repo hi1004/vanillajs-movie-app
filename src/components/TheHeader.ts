@@ -62,12 +62,8 @@ export default class TheHeader extends Component {
         </ul>
       </nav>
       <a href="#/about" class="user">
-<<<<<<< HEAD:src/components/TheHeader.js
         <img src='${aboutStore.state.photo}' alt="User">
       </a>
-=======
-      <img src='${aboutStore.state.photo}' alt="User">      </a>
->>>>>>> typescript:src/components/TheHeader.ts
     `;
   }
 }
