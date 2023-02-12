@@ -28,10 +28,6 @@ export default class TheHeader extends Component {
             name: 'About',
             href: '#/about',
           },
-          {
-            name: 'Test',
-            href: '#/',
-          },
         ],
       },
     });
