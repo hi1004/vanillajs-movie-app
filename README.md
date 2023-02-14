@@ -301,4 +301,3 @@ const bigPoster = movie.Poster.replace('SX300', 'SX700');
 - `render関数`の中で実行せず、ストアから一回だけ実行したのが問題`
 - ページが移動した時にストアから状態を取得できるように、reder関数でも実行されるように処置
 </details>
-```
