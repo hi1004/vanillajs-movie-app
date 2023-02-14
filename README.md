@@ -1,7 +1,7 @@
 # 🎦Movie App (TypeScript ver.)
 
 OMDB API を活用した VanillaJs 映画検索アプリケーションです。<br>
-このプロジェクトは[JS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/js-only)と[TS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/main)で分けられています。
+このプロジェクトは[JS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/js-only)と[TS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/main)で分けられています。<br>
 基本バージョンは TS です。
 
 [DEMO - OMDBAPI THE OPEN MOVIE APP](https://ts-movie-app-umber.vercel.app/#/)
