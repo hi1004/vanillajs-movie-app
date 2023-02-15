@@ -279,6 +279,7 @@ const bigPoster = movie.Poster.replace('SX300', 'SX700');
   - **Client**からOPEN API要請を送ったが、`500 Internal Server Error`が発生。
   ![Issue](/src/images/module_issue.png)
   ### ✅ Solution
+  - ESモジュールのバージョンが違い、プロジェクトで適用されなかったバージョンイシューが発生。
   - ESモジュールをロードするには、`package.json`から `type': "module"`を設定。
 </details>
 <details>
