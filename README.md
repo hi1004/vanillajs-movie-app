@@ -10,7 +10,8 @@ OMDB API を活用した VanillaJs 映画検索アプリケーションです。
 
 <details>
 	<summary><b>コードで見るコア機能</b></summary>
-![gif](/src/images/demo.gif)
+	![gif](/src/images/demo.gif)
+	
 ### Reset.css
 
 ブラウザの基本スタイルを初期化します。
