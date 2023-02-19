@@ -13,6 +13,8 @@ const store = new Store({
 export default store;
 
 export const searchMovies = async page => {
+  const viewMoreEl = document.querySelector('.view-more');
+  viewMoreEl?.classList.add('hide');
   store.state.loading = true;
   store.state.page = page;
   if (page === 1) {
