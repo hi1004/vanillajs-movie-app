@@ -7,11 +7,15 @@ OMDB API を活用した VanillaJs 映画検索アプリケーションです。
 [DEMO - OMDBAPI THE OPEN MOVIE APP](https://ts-movie-app-umber.vercel.app/#/)
 ![Screenshot](/src/images/screenshot_domo.png)
 
+<br>
+<hr?
+<br>
+
+![gif](/src/images/demo.gif)
 
 <details>
 	<summary><b>コードで見るコア機能</b></summary>
-	![gif](/src/images/demo.gif)
-	
+
 ### Reset.css
 
 ブラウザの基本スタイルを初期化します。
@@ -22,6 +26,7 @@ OMDB API を活用した VanillaJs 映画検索アプリケーションです。
   href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
 />
 ```
+	
 
 ### Google Fonts
 
@@ -270,6 +275,7 @@ const bigPoster = movie.Poster.replace('SX300', 'SX700');
 ```
 
 </details>
+
 
 ## ⚠️Troubleshooting
 
