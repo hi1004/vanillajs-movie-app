@@ -4,7 +4,7 @@ OMDB API を活用した VanillaJs 映画検索アプリケーションです。
 このプロジェクトは[JS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/js-only)と[TS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/main)で分けられています。<br>
 基本バージョンは TS です。
 
-[DEMO - OMDBAPI THE OPEN MOVIE APP](https://ts-movie-app-umber.vercel.app/#/)
+[DEMO - OMDBAPI THE OPEN MOVIE APP](https://bit.ly/3I7thE2)
 ![Screenshot](/src/images/screenshot_domo.png)
 
 <br>
