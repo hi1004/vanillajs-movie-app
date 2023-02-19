@@ -1,7 +1,7 @@
 # 🎦Movie App (TypeScript ver.)
 
-OMDB API を活用した VanillaJs 映画検索アプリケーションです。
-このプロジェクトは[JS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/js-only)と[TS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/main)で分けられています。
+OMDB API を活用した VanillaJs 映画検索アプリケーションです。<br>
+このプロジェクトは[JS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/js-only)と[TS バージョン](https://github.com/hi1004/vanillajs-movie-app/tree/main)で分けられています。<br>
 基本バージョンは TS です。
 
 [DEMO - OMDBAPI THE OPEN MOVIE APP](https://ts-movie-app-umber.vercel.app/#/)
@@ -279,6 +279,7 @@ const bigPoster = movie.Poster.replace('SX300', 'SX700');
   - **Client**からOPEN API要請を送ったが、`500 Internal Server Error`が発生。
   ![Issue](/src/images/module_issue.png)
   ### ✅ Solution
+  - ESモジュールのバージョンが違い、プロジェクトで適用されなかったバージョンイシューが発生。
   - ESモジュールをロードするには、`package.json`から `type': "module"`を設定。
 </details>
 <details>
