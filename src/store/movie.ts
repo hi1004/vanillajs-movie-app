@@ -58,6 +58,8 @@ const store = new Store<State>({
 
 export default store;
 export const searchMovies = async (page: number) => {
+  const viewMoreEl = document.querySelector('.view-more');
+  viewMoreEl?.classList.add('hide');
   store.state.loading = true;
   store.state.page = page;
   if (page === 1) {
@@ -65,7 +67,6 @@ export const searchMovies = async (page: number) => {
     store.state.message = '';
   }
   try {
-    // const res = await fetch(`https://omdbapi.com?apikey=7035c60c&s=${store.state.searchText}&page=${page}`)
     const res = await fetch('/api/movie', {
       method: 'POST',
       body: JSON.stringify({
@@ -88,7 +89,6 @@ export const searchMovies = async (page: number) => {
 };
 export const getMovieDetails = async (id: string) => {
   try {
-    // const res = await fetch(`https://omdbapi.com?apikey=${APIKEY}&i=${id}&plot=full`)
     const res = await fetch('/api/movie', {
       method: 'POST',
       body: JSON.stringify({
