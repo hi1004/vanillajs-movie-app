@@ -6,11 +6,11 @@ OMDB API を活用した VanillaJs 映画検索アプリケーションです。
 
 [DEMO - OMDBAPI THE OPEN MOVIE APP](https://ts-movie-app-umber.vercel.app/#/)
 ![Screenshot](/src/images/screenshot_domo.png)
-![gif](/src/images/demo.gif)
+
 
 <details>
 	<summary><b>コードで見るコア機能</b></summary>
-
+![gif](/src/images/demo.gif)
 ### Reset.css
 
 ブラウザの基本スタイルを初期化します。
