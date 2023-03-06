@@ -277,7 +277,7 @@ const bigPoster = movie.Poster.replace('SX300', 'SX700');
 </details>
 
 
-## ⚠️Troubleshooting
+## ⚠️TroubleShooting
 
 <details>
   <summary>1. OPEN APIを要請する時、500 Internal Server Error イシュー</summary>
